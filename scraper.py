@@ -57,14 +57,15 @@ def infoscraper(hreflist, checkstring = "Open/apply now."):
 				jobinfo[i].location = infolist[3]
 				jobinfo[i].link = link
 				i += 1
-			if (len(infolist) == 3):
+			elif (len(infolist) == 1):
+				del jobinfo[i]
+			else:
 				jobinfo[i].name == infolist[0]
 				jobinfo[i].organization == infolist[1]
 				jobinfo[i].location == infolist[2]
 				jobinfo[i].link = link
 				i += 1
-			if (len(infolist) == 1):
-				del jobinfo[i]
+			
 			#jobinfo[i].contactinfo = [a["href"] for a in soup.select('a[href^=mailto:]')]
 			
 	return jobinfo
