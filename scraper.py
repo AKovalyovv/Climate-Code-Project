@@ -1,12 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
-def pagedownload(website): #Download a page for later usage
+def pagedownload(website, errorstring = "No exact matches found"): #Download a page for later usage
 	html = ""
 	htmllist = []
 	i = "1"
 	inum = 1
-	while "No exact matches found" not in html:
+	while errorstring not in html:
 		page = requests.get(website + i) #Attempts to download the page
 		html = page.text
 		htmllist.append(html)
