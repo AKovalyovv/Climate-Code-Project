@@ -12,10 +12,14 @@ function initialize() {
 		console.log(jobs[0]);
 	})
 	.then(() => {
-		var ul = document.getElementById("header");
-		jobs.forEach(job => {
-  			ul.appendChild(createListItem(job));
-		});
+		renderAllJobs();
+	});
+}
+
+function renderAllJobs() {
+	var ul = document.getElementById("row");
+	jobs.forEach(job => {
+			ul.appendChild(createListItem(job));
 	});
 }
 
@@ -50,11 +54,33 @@ function createListItem(job) {
 
 /*
 	Pulls jobs based on the location
-	
+	1. Clear the ul
+	2. Filter jobs list and return list of jobs that match location
+	3. Use createListItem() to re-render job list
 */
+
+function input() {
+	return document.getElementById("fname").value;
+}
+
 function submitForm() {
 	console.log("form was submitted");
-	
+	var userInput = input();
+	document.getElementById("row").innerHTML = "";
+
+	if (input == "") {
+		renderAllJobs();
+	} else {
+		var ul = document.getElementById("row");
+		jobs.filter( job => {
+			console.log(job.location)
+			if (job.location.includes(userInput)) {
+				ul.appendChild(createListItem(job));
+			}
+		})
+	}
+
+	console.log(userInput);
 	return false;
 }
 
