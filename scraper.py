@@ -49,23 +49,19 @@ def infoscraper(hreflist, checkstring = "Open/apply now."):
 			info = soup.title.text
 			infolist = info.split(', ', 3)
 			posting = VolunteerPosting("Name", "N/A", "Organization", "Location", "Link")
-			jobinfo.append(posting)
 			if (len(infolist) == 4):
+				jobinfo.append(posting)
 				jobinfo[i].name = infolist[0]
 				jobinfo[i].details = infolist[1]
 				jobinfo[i].organization = infolist[2]
 				jobinfo[i].location = infolist[3]
 				jobinfo[i].link = link
 				i += 1
-			elif (len(infolist) == 1):
-				del jobinfo[i]
-			else:
-				jobinfo[i].name == infolist[0]
-				jobinfo[i].organization == infolist[1]
-				jobinfo[i].location == infolist[2]
+			elif (len(infolist) == 3):
+				jobinfo.append(posting)
+				jobinfo[i].name = infolist[0]
+				jobinfo[i].organization = infolist[1]
+				jobinfo[i].location = infolist[2]
 				jobinfo[i].link = link
-				i += 1
-			
-			#jobinfo[i].contactinfo = [a["href"] for a in soup.select('a[href^=mailto:]')]
-			
+				i += 1	
 	return jobinfo
