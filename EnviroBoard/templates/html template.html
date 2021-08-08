@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<title>Page Name</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 1.2em "Helvetica", sans-serif;
+  background-color: #f1f1f1;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background-color: grey;
+}
+
+.row {
+  max-width: 2100px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .row { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1500px) {
+  .row { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (min-width: 1800px) {
+  .row { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (min-width: 2100px) {
+  .row { grid-template-columns: repeat(7, 1fr); }
+}
+
+.column {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: black;
+  border-style: solid;
+  border-color:#f1f1f1;
+  border-width: 15px;
+  background: grey;
+  border-radius: 25px
+}
+
+.column:hover {
+  background-color: #333;
+  color: #ddd;
+}
+
+.column a {
+    color: inherit;
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+</div>
+
+<div class="row">
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+
+    <a href="http://google.ca/"><div class="column">
+      <h2>Job Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Location</p>
+    </div></a>
+</div>
+
+</body>
+</html>
